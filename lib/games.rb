@@ -1,6 +1,5 @@
 class Games
-  attr_reader :events,
-              :year
+  attr_reader :events, :year
 
   def initialize(year)
     @year = year
