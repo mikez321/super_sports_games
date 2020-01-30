@@ -37,13 +37,11 @@ class GamesTest < Minitest::Test
   def test_it_can_create_a_single_event_summary
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     games = Games.new(2017)
-    require "Pry"; binding.pry
     expected = "Curling        41                  18                  26.6                8.28"
     assert_equal expected, games.event_summary(curling)
   end
 
   def test_it_can_create_a_summary_for_all_events
-    skip
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     ring_toss = Event.new("Ring Toss", [23, 22, 29, 18, 30])
     games = Games.new(2017)
@@ -55,7 +53,6 @@ class GamesTest < Minitest::Test
   end
 
   def test_it_can_create_a_summary_for_the_games
-    skip
     curling = Event.new("Curling", [24, 30, 18, 20, 41])
     ring_toss = Event.new("Ring Toss", [23, 22, 29, 18, 30])
     games = Games.new(2017)
